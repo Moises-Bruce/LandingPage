@@ -8,17 +8,22 @@
 html,body{
     height: 100%;
 }
+
+.clear{
+    clear: both;
+}
  
 /*Cabeçalho abaixo*/
 .center{
-    width: 1200px;
+    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 2%;
 }
 
 .header{
-    min-width: 1200px;
     width: 100%;
+    padding: 0 2%;
     height: 60px;
     background-color: #212343;
 }
@@ -29,11 +34,11 @@ html,body{
 
 .container-banner{/*Container Img*/
     width: 100%;
+    padding: 0 2%;
     height: 557px;
     background-image: url('../images/header_bg.png');
     background-size: cover;
     background-position: center;
-    min-width: 1200px;
 }
 
 .container-banner > .center{
@@ -155,10 +160,10 @@ html,body{
 /*Meio*/
 
 .container-2{
-    padding: 40px 0;
+    padding: 40px 2%;
     background-color: #DDDDDD;
     text-align: center;
-    min-width: 1200px;
+    
 }
 
 .container-2 h2{
@@ -167,7 +172,7 @@ html,body{
 }
 
 .container-2 p{
-    width: 698px;
+    width: 100%;
     margin: 15px 0;
     display: inline-block;
     text-align: justify;
@@ -187,9 +192,7 @@ html,body{
 /*Final*/
 
 .section-1{
-    min-width: 1200px;
-    padding: 90px 0;
-
+    padding: 90px 2%;
 }
 
 .section-1 h2{
@@ -237,4 +240,89 @@ html,body{
 
 .footer p{
     margin-top: 8px;
+}
+
+/*Responsividade em diferentes telas, mediaQuerys*/
+
+@media screen and (max-width: 1024px){
+    .header{
+        height: auto;
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .header img{
+        margin: 0;
+    }
+
+    .container-banner{/*Container Img*/
+        width: 100%;
+        padding: 40px 2%;
+        height: auto;
+        text-align: center;
+    }
+
+    .container-list{
+        padding: 30px 0;
+        float: none;
+        width: 40%;
+        float: left;
+        max-width: 500px;
+        height: auto;
+        display: inline-block;
+    }
+
+    .form{
+        max-width: 400px;
+        padding: 10px;
+        width: 60%;
+        height:100%;
+        top: 0;
+        float: right;
+        display: inline-block;    
+    }
+
+    input-container input[type=text]{
+        width: 100%;
+        height: 55px;
+    }
+    
+    
+    .form input[type=submit]{   
+        max-width: 280px;
+        width: 100%;
+        height: 56px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    .container-2 p{
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+
+    .container-list{
+        margin-top: 0;
+        float: none;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .form{
+        float: none;
+        display: inline-block;
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    .container-single{
+        float: none;
+        display: inline-block;
+        width: 100%;
+        max-width: 600px;
+        padding: 30px 0;
+    }
 }
